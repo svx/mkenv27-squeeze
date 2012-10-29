@@ -13,7 +13,7 @@
 #just a proof of concept, atm
 
 
-PYTHON_PATH="/home/$USER/opt/python/bin/"
+PYTHON_PATH="/home/$USER/opt/python2.7/bin/"
 
 error_exit() {
         echo "$1"
@@ -34,7 +34,7 @@ case "$1" in
                 [ -d "$1" ] && error_exit "Directory $1 already exists"
 
                 eval "$PYTHON_PATH"/virtualenv-2.7 --no-site-packages "$1" || \
-              
+
                     error_exit "something went wrong, please investigate"
         ;;
 esac
